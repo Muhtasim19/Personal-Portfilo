@@ -92,3 +92,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(s => sectionObserver.observe(s));
 });
+
+const readMoreBtn = document.getElementById("readMoreBtn");
+const aboutSection = document.querySelector(".about-full");
+const closeAbout = document.getElementById("closeAbout");
+
+readMoreBtn.addEventListener("click", () => {
+  document.body.classList.add("blurred");
+  aboutSection.classList.add("active");
+});
+
+closeAbout.addEventListener("click", () => {
+  document.body.classList.remove("blurred");
+  aboutSection.classList.remove("active");
+});

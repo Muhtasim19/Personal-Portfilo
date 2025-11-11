@@ -243,3 +243,8 @@ h2{ font-size:1.4rem; margin:0 0 12px; color: #e9fbff; }
   .logo{ font-size:0.98rem;}
   .nav-links{ display:none; }
 }
+
+body.blurred main {
+  filter: blur(6px);
+  transition: filter 0.3s ease-in-out;
+}
