@@ -1,11 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhtasim Haq</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhtasim Haq — Aspiring AI Engineer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="description" content="Muhtasim Haq — aspiring AI engineer. Projects: Animated Clock, Solar.">
 </head>
 <body>
-    <h1>Muhtasim Haq's Website</h1>
+  <!-- NAV -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#hero">Muhtasim Haq</a>
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Hi, I’m <span class="accent">Muhtasim Haq</span></h1>
+          <p class="subtitle">Aspiring AI Engineer — high school student at Cambridge Rindge and Latin (Class of 2027).</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn primary">View My Work</a>
+            <a href="#about" class="btn ghost">Learn More</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <!-- decorative card — you can add an image here later -->
+          <div class="card-inner">
+            <div class="card-title">Focus</div>
+            <ul class="card-list">
+              <li>Machine Learning</li>
+              <li>Cybersecurity</li>
+              <li>Software Engineering</li>
+            </ul>
+            <div class="card-tag">Graduating 2027</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section reveal">
+      <div class="container">
+        <h2>About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <!-- preview area shows only two lines initially -->
+            <p id="about-preview" class="text-preview">
+              Hi, I'm Muhtasim Haq, a driven high school student at Cambridge Rindge and Latin School, graduating in 2027. I'm passionate about shaping the future through technology, with a deep focus on computer science, machine learning, cybersecurity, and software engineering.
+            </p>
+
+            <!-- full content hidden initially -->
+            <div id="about-full" class="hidden-full">
+              <p>
+                My dream is to pursue engineering at the university level, where I can dive deeper into cutting-edge technologies and develop innovative solutions to real-world problems. I thrive on challenges that push me to think critically and creatively, constantly expanding my knowledge and skillset.
+              </p>
+              <h4>What Drives Me</h4>
+              <ul>
+                <li><strong>Innovation:</strong> I'm fascinated by how technology can transform industries and improve lives.</li>
+                <li><strong>Continuous Learning:</strong> Every challenge is an opportunity to grow and master new concepts.</li>
+                <li><strong>Problem-Solving:</strong> I love breaking down complex problems and building elegant solutions.</li>
+                <li><strong>Future-Forward Thinking:</strong> I'm committed to developing skills that will define tomorrow's tech landscape.</li>
+              </ul>
+              <p>
+                Whether it's building secure systems, training intelligent models, or crafting efficient software, I'm excited to explore the endless possibilities that computer science offers.
+              </p>
+              <p><em>Let's connect — I'm always eager to collaborate on interesting projects or discuss emerging technologies.</em></p>
+            </div>
+
+            <button id="about-toggle" class="btn small outline">Read more</button>
+          </div>
+
+          <div class="about-image" aria-hidden="true">
+            <!-- placeholder — you can replace with your photo -->
+            <div class="avatar">MH</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-section reveal">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="muted">Featured projects — click a card to open the live demo.</p>
+
+        <div id="projects-grid" class="projects-grid">
+          <article class="project-card">
+            <a href="https://muhtasim19.github.io/Animated-clock/" target="_blank" rel="noopener noreferrer">
+              <div class="project-media" role="img" aria-label="Animated clock preview">
+                <!-- placeholder gradient -->
+                <div class="media-placeholder">Animated Clock</div>
+              </div>
+              <div class="project-body">
+                <h3>Animated Clock</h3>
+                <p class="short-desc">A visually engaging clock with animated elements — built with JS & CSS animations.</p>
+                <div class="project-actions">
+                  <span class="tag">Vanilla JS</span>
+                  <span class="tag">CSS Animations</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <a href="https://muhtasim19.github.io/Solar/" target="_blank" rel="noopener noreferrer">
+              <div class="project-media" role="img" aria-label="Solar project preview">
+                <div class="media-placeholder">Solar</div>
+              </div>
+              <div class="project-body">
+                <h3>Solar Project</h3>
+                <p class="short-desc">Interactive solar-themed demo — showcases DOM interaction and responsive layout.</p>
+                <div class="project-actions">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="projects-more">
+          <button id="projects-toggle" class="btn outline small">View more projects</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">© <span id="year"></span> Muhtasim Haq</div>
+
+      <div class="footer-icons" aria-hidden="false">
+        <!-- GitHub icon -->
+        <a href="https://github.com/Muhtasim19" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.93 3.19 9.11 7.61 10.59.56.1.77-.24.77-.54 0-.26-.01-1.13-.02-2.05-3.09.67-3.74-1.5-3.74-1.5-.51-1.28-1.25-1.62-1.25-1.62-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.73 2.65 1.23 3.3.94.1-.73.39-1.23.71-1.52-2.47-.28-5.06-1.24-5.06-5.52 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.41.11-2.93 0 0 .95-.31 3.12 1.16a10.74 10.74 0 0 1 2.84-.38c.96.01 1.93.13 2.84.38 2.17-1.48 3.12-1.16 3.12-1.16.61 1.52.23 2.65.11 2.93.73.78 1.16 1.78 1.16 3 0 4.29-2.6 5.24-5.08 5.51.4.35.74 1.05.74 2.12 0 1.53-.01 2.77-.01 3.14 0 .3.2.65.78.54A11.26 11.26 0 0 0 23.25 11.75C23.25 5.48 18.27.5 12 .5z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn icon -->
+        <a href="https://www.linkedin.com/in/muhtasim-haq-b55356325" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5a2.87 2.87 0 1 0 0 5.75 2.87 2.87 0 0 0 0-5.75zM3 9h4v12H3zM9 9h3.84v1.61h.05c.53-.99 1.82-2.03 3.75-2.03 4.01 0 4.75 2.64 4.75 6.07V21H17v-5.1c0-1.22-.02-2.8-1.71-2.8-1.72 0-1.98 1.34-1.98 2.71V21H9z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
