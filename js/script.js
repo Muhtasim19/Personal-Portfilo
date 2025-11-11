@@ -1,108 +1,54 @@
-// Smooth scroll for anchor links + active nav highlight
-document.addEventListener('DOMContentLoaded', () => {
-  // set current year in footer
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  // smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(a.getAttribute('href'));
-      if (!target) return;
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-      // update active nav (small delay for UX)
-      setTimeout(() => {
-        navLinks.forEach(n => n.classList.remove('active'));
-        if (a.classList.contains('nav-link')) a.classList.add('active');
-      }, 300);
-    });
-  });
-
-  // reveal elements on scroll
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  }, { threshold: 0.12 });
-
-  revealEls.forEach(el => observer.observe(el));
-
-  // ABOUT toggle
-  const aboutToggle = document.getElementById('about-toggle');
-  const aboutFull = document.getElementById('about-full');
-  const aboutPreview = document.getElementById('about-preview');
-  let aboutOpen = false;
-
-  aboutToggle.addEventListener('click', () => {
-    aboutOpen = !aboutOpen;
-    if (aboutOpen) {
-      aboutFull.style.display = 'block';
-      aboutPreview.style.webkitLineClamp = 'none';
-      aboutToggle.textContent = 'Show less';
-      aboutFull.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    } else {
-      aboutFull.style.display = 'none';
-      aboutPreview.style.webkitLineClamp = '2';
-      aboutToggle.textContent = 'Read more';
+// Smooth scrolling
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 60,
+        behavior: 'smooth'
+      });
     }
   });
-
-  // Projects toggle: simple expand (this is a placeholder for more projects)
-  const projectsToggle = document.getElementById('projects-toggle');
-  const projectsGrid = document.getElementById('projects-grid');
-  let projectsExpanded = false;
-  projectsToggle.addEventListener('click', () => {
-    projectsExpanded = !projectsExpanded;
-    if (projectsExpanded) {
-      // Add a small placeholder additional card (or you can load dynamically)
-      const moreCard = document.createElement('div');
-      moreCard.className = 'project-card extra';
-      moreCard.innerHTML = `
-        <a href="https://github.com/Muhtasim19" target="_blank" rel="noopener noreferrer">
-          <div class="project-media"><div class="media-placeholder">More on GitHub</div></div>
-          <div class="project-body"><h3>Explore more</h3><p class="short-desc">View additional projects and source code on my GitHub.</p><div class="project-actions"><span class="tag">GitHub</span></div></div>
-        </a>
-      `;
-      projectsGrid.appendChild(moreCard);
-      projectsToggle.textContent = 'Show less';
-      moreCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    } else {
-      // remove extras
-      const extras = projectsGrid.querySelectorAll('.project-card.extra');
-      extras.forEach(e => e.remove());
-      projectsToggle.textContent = 'View more projects';
-    }
-  });
-
-  // small helper: update active nav on scroll (optional)
-  const sections = document.querySelectorAll('main section, header');
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && entry.target.id) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        const link = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-        if (link) link.classList.add('active');
-      }
-    });
-  }, { threshold: 0.35 });
-
-  sections.forEach(s => sectionObserver.observe(s));
 });
 
+// Active link highlight
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section');
+  const scrollY = window.scrollY;
+
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 80;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute('id');
+    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+
+    if (scrollY >= top && scrollY < top + height) {
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      if (link) link.classList.add('active');
+    }
+  });
+});
+
+// About Me Read More popup
 const readMoreBtn = document.getElementById("readMoreBtn");
-const aboutSection = document.querySelector(".about-full");
+const aboutFull = document.getElementById("aboutFull");
 const closeAbout = document.getElementById("closeAbout");
 
 readMoreBtn.addEventListener("click", () => {
   document.body.classList.add("blurred");
-  aboutSection.classList.add("active");
+  aboutFull.classList.add("active");
 });
 
 closeAbout.addEventListener("click", () => {
   document.body.classList.remove("blurred");
-  aboutSection.classList.remove("active");
+  aboutFull.classList.remove("active");
+});
+
+// Click outside to close About popup
+aboutFull.addEventListener("click", (e) => {
+  if (e.target === aboutFull) {
+    document.body.classList.remove("blurred");
+    aboutFull.classList.remove("active");
+  }
 });
