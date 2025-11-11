@@ -184,63 +184,6 @@ h2{ font-size:1.4rem; margin:0 0 12px; color: #e9fbff; }
   border:1px solid rgba(255,255,255,0.03);
 }
 
-/* About section background blur when expanded */
-.about-expanded {
-  backdrop-filter: blur(10px);
-  background-color: rgba(1, 42, 74, 0.4); /* subtle translucent navy tone */
-  border-radius: 15px;
-  padding: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* --- About Section Blur Enhancement --- */
-.about-section {
-  text-align: center;
-  padding: 80px 20px;
-  color: #fff;
-}
-
-.about-text {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-  color: #e3f2fd;
-  transition: all 0.3s ease-in-out;
-}
-
-.more-text {
-  display: none;
-}
-
-.about-text.expanded .more-text {
-  display: inline;
-}
-
-.about-expanded {
-  backdrop-filter: blur(10px);
-  background-color: rgba(1, 42, 74, 0.5);
-  border-radius: 15px;
-  padding: 20px;
-  transition: all 0.4s ease;
-}
-
-.read-more-btn {
-  margin-top: 20px;
-  padding: 10px 25px;
-  border: none;
-  background-color: #2c7da0;
-  color: #fff;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.read-more-btn:hover {
-  background-color: #61a5c2;
-}
-
-
 /* projects */
 .projects-grid{
   display:grid;

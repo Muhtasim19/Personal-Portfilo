@@ -92,13 +92,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(s => sectionObserver.observe(s));
 });
-const readMoreBtn = document.querySelector('.read-more-btn');
-const aboutText = document.querySelector('.about-text');
-
-readMoreBtn.addEventListener('click', () => {
-  aboutText.classList.toggle('expanded');
-  aboutText.classList.toggle('about-expanded');
-  readMoreBtn.textContent = aboutText.classList.contains('expanded')
-    ? 'Show Less'
-    : 'Read More';
-});
