@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhtasim Haq — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Remov e this before posting this to the public-->
+  <meta name="description" content="Muhtasim Haq portfolio">
+</head>
+
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#hero">Muhtasim Haq</a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Hi, I’m <span class="accent">Muhtasim Haq</span></h1>
+          <p class="subtitle">
+            High school student • Computer Science • Photography
+          </p>
+
+          <div class="hero-badges">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Profile Photo -->
+        <div class="hero-photo">
+          <img
+            class="profile-pic"
+            src="image/profile.jpeg"
+            alt="Muhtasim Haq portrait"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About Me</h2>
+
+        <div class="about-card">
+          <p>
+            I’m a high school student interested in computer science and digital media.
+            I enjoy building websites, learning new technologies, and creating projects
+            that help me grow as a developer.
+          </p>
+          <p>
+            Outside of academics, I enjoy photography and video editing.
+            These hobbies allow me to explore storytelling and creativity through media.
+          </p>
+
+          <!-- Resume Button -->
+          <div class="about-actions">
+            <a class="btn primary" href="html/resume.html">Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED WORK ================= -->
+    <section id="work" class="work-section">
+      <div class="container">
+        <h2>Featured Work</h2>
+        <p class="muted">
+          One featured computer science project and one featured video project.
+        </p>
+
+        <div class="work-grid">
+          <!-- COMPUTER PROJECT -->
+          <article class="work-card">
+            <a href="https://69481b99b9540aa1febb9f36--coruscating-froyo-7bfb00.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <div class="work-media">
+                <img
+                  class="project-thumb"
+                  src="image/Clock.png"
+                  alt="Animated Clock project preview"
+                >
+              </div>
+
+              <div class="work-body">
+                <h3>Animated Clock</h3>
+                <p class="short-desc">
+                  A dynamic clock built using JavaScript and CSS animations.
+                </p>
+                <div class="tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">CSS</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- VIDEO PROJECT -->
+          <article class="work-card">
+            <div class="work-media video-wrap">
+
+              <iframe
+                class="video"
+                src="https://www.youtube.com/embed/Y9DNOikjOqU"
+                title="History of Boston"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+
+            </div>
+
+            <div class="work-body">
+              <h3>History of Boston</h3>
+              <p class="short-desc">
+                A documentary-style video project exploring the history of Boston.
+              </p>
+              <div class="tags">
+                <span class="tag">Video Editing</span>
+                <span class="tag">Storytelling</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Projects Page Button -->
+        <div class="work-actions">
+          <a class="btn primary" href="html/project.html">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER / CONTACT ================= -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Contact Me</h2>
+        <p class="muted">Send me a message using the form below.</p>
+
+        <div class="social-row">
+          <a class="social"
+             href="https://github.com/Muhtasim19"
+             target="_blank"
+             rel="noopener noreferrer">GitHub</a>
+
+          <a class="social"
+             href="https://www.linkedin.com/in/muhtasim-haq-b55356325"
+             target="_blank"
+             rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form
+        class="form"
+        action="https://formspree.io/f/mpqalzbk"
+        method="POST"
+      >
+        <label>
+          Your email
+          <input type="email" name="email" required placeholder="you@example.com">
+        </label>
+
+        <label>
+          Your message
+          <textarea name="message" rows="5" required placeholder="Write your message..."></textarea>
+        </label>
+
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Muhtasim Haq</p>
+    </div>
+  </footer>
+
+  <!-- Year Script -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
