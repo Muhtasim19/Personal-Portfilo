@@ -22,28 +22,48 @@
 
     <section class="header">
       <div class="name-block">
-        <h1>Muhtasim Haq</h1>
+        <h1 id="secretName">Muhtasim Haq</h1>
         <p class="headline">
+          High school student leader with experience in media, community engagement, and public-facing roles
         </p>
+      </div>
+
+      <div class="contact">
+        <p><a href="tel:+16176851177">+1 617-685-1177</a></p>
+        <p><a href="mailto:muhtasimhaqbd@gmail.com">muhtasimhaqbd@gmail.com</a></p>
+        <p>Cambridge, MA</p>
+        <p><a href="https://muhtasimhaq.com" target="_blank" rel="noopener">muhtasimhaq.com</a></p>
+        <p><a href="https://www.linkedin.com/in/muhtasim-haq-b55356325" target="_blank" rel="noopener">LinkedIn</a></p>
       </div>
     </section>
 
     <hr class="rule">
-
 
     <section class="section">
       <h2>Education</h2>
       <div class="item">
         <div class="item-top">
           <h3>Cambridge Rindge & Latin School</h3>
-          <span class="date">Anticipated Graduation: 2027</span>
+          <span class="date">Anticipated Graduation: June 2027</span>
         </div>
         <p class="muted">Cambridge, MA</p>
       </div>
     </section>
 
     <section class="section">
-      <h2>Experience</h2>
+      <h2>Leadership</h2>
+
+      <div class="item">
+        <div class="item-top">
+          <h3>CRLS Cricket Club — President</h3>
+          <span class="date">Present</span>
+        </div>
+        <ul>
+          <li>Lead team coordination, communication, and planning for practices, matches, and club activities.</li>
+          <li>Support newer members and help create a collaborative team environment.</li>
+          <li>Manage scheduling, responsibilities, and team organization.</li>
+        </ul>
+      </div>
 
       <div class="item">
         <div class="item-top">
@@ -54,8 +74,13 @@
         <ul>
           <li>Designed graphics and edited videos for multiple media projects.</li>
           <li>Recorded and produced live events including concerts and football games.</li>
+          <li>Collaborated with peers on planning and creative production work.</li>
         </ul>
       </div>
+    </section>
+
+    <section class="section">
+      <h2>Experience</h2>
 
       <div class="item">
         <div class="item-top">
@@ -64,8 +89,8 @@
         </div>
         <ul>
           <li>Produced and edited video content for MYSEP Sites.</li>
-          <li>Developed in-depth photography skills, focusing on composition and visual storytelling.</li>
-          <li>Learned how to communicate ideas visually for funding proposals and project planning.</li>
+          <li>Developed photography skills focused on composition and visual storytelling.</li>
+          <li>Learned to communicate ideas visually for funding proposals and project planning.</li>
         </ul>
       </div>
 
@@ -92,7 +117,6 @@
         </ul>
       </div>
     </section>
-
 
     <section class="section">
       <h2>Volunteering</h2>
@@ -122,11 +146,14 @@
       </div>
     </section>
 
-
     <section class="section">
       <h2>Skills</h2>
 
       <div class="skills">
+        <span class="pill">Leadership</span>
+        <span class="pill">Communication</span>
+        <span class="pill">Teamwork</span>
+        <span class="pill">Public Speaking</span>
         <span class="pill">Adobe Premiere Pro</span>
         <span class="pill">Adobe Illustrator</span>
         <span class="pill">Adobe Photoshop</span>
@@ -145,5 +172,15 @@
     </section>
 
   </main>
+
+  <script>
+    const name = document.getElementById("secretName");
+
+    if (name) {
+      name.addEventListener("dblclick", () => {
+        window.location.href = "hidden_resume.html";
+      });
+    }
+  </script>
 </body>
 </html>
