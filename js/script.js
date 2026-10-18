@@ -39,7 +39,10 @@
 
       if (response.ok) {
         form.reset();
-        showStatus("Thanks! Your message has been sent.", "success");
+        showStatus(
+          "Thanks for reaching out! I’ll get back to you soon.", 
+          "success"
+        );
       } else {
         const result = await response.json().catch(() => null);
         const errors = Array.isArray(result?.errors)
