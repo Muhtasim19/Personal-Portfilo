@@ -491,3 +491,7 @@ textarea:focus {
     display: flex;
   }
 }
+
+.form-honeypot {
+  display: none;
+}

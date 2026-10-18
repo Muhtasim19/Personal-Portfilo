@@ -221,6 +221,16 @@
         action="https://formspree.io/f/mpqalzbk"
         method="POST"
       >
+        <!-- Spam trap: visitors should leave this field empty. -->
+        <input
+          type="text"
+          name="_gotcha"
+          class="form-honeypot"
+          autocomplete="off"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+
         <label>
           Your email
           <input
