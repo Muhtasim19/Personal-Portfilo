@@ -212,7 +212,7 @@ h1 {
 }
 
 .btn.primary {
-  background: linear-gradient(90deg, var(--blue1), var(--red1));
+  background: linear-gradient(90deg, #334cb5, #a43446);
   color: white;
   border: none;
 }
