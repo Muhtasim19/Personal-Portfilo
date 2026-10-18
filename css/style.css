@@ -428,3 +428,66 @@ textarea:focus {
     height: 180px;
   }
 }
+
+/* Mobile navigation */
+.nav-toggle {
+  display: none;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid rgba(11, 18, 32, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--text-dark);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-toggle:focus-visible,
+.nav-link:focus-visible,
+.logo:focus-visible {
+  outline: 3px solid var(--text-dark);
+  outline-offset: 3px;
+}
+
+/* Keep section headings below the sticky navigation */
+#hero,
+#about,
+#work,
+#contact {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (max-width: 540px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Links remain available if JavaScript fails to load */
+  .nav-links {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .nav-link {
+    display: block;
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+
+  .nav[data-menu-ready] .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .nav[data-menu-ready] .nav-links {
+    display: none;
+  }
+
+  .nav[data-menu-ready] .nav-links.is-open {
+    display: flex;
+  }
+}

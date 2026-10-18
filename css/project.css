@@ -208,3 +208,10 @@ h3{
   .links a{ display:none; }
   .back-btn{ display:inline-block; }
 }
+
+@media (max-width: 560px) {
+  .links .back-btn {
+    display: inline-block;
+    min-height: 44px;
+  }
+}

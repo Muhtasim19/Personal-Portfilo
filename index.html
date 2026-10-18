@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Muhtasim Haq — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="Muhtasim Haq portfolio">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,10 +20,27 @@
   <header class="site-header">
     <nav class="nav container">
       <a class="logo" href="#hero">Muhtasim Haq</a>
-      <ul class="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#work" class="nav-link">Work</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        hidden
+      >
+        Menu
+      </button>
+
+      <ul id="primary-navigation" class="nav-links">
+        <li>
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li>
+          <a href="#work" class="nav-link">Work</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -29,7 +51,10 @@
     <section id="hero" class="hero-section">
       <div class="container hero-grid">
         <div class="hero-content">
-          <h1>Hi, I’m <span class="accent">Muhtasim Haq</span></h1>
+          <h1>
+            Hi, I’m <span class="accent">Muhtasim Haq</span>
+          </h1>
+
           <p class="subtitle">
             High school student • Computer Science • Photography
           </p>
@@ -61,6 +86,7 @@
             I enjoy building websites, learning new technologies, and creating projects
             that help me grow as a developer.
           </p>
+
           <p>
             Outside of academics, I enjoy photography and video editing.
             These hobbies allow me to explore storytelling and creativity through media.
@@ -68,7 +94,9 @@
 
           <!-- Resume Button -->
           <div class="about-actions">
-            <a class="btn primary" href="html/resume.html">Resume</a>
+            <a class="btn primary" href="html/resume.html">
+              Resume
+            </a>
           </div>
         </div>
       </div>
@@ -78,11 +106,13 @@
     <section id="work" class="work-section">
       <div class="container">
         <h2>Featured Work</h2>
+
         <p class="muted">
           One featured computer science project and one featured video project.
         </p>
 
         <div class="work-grid">
+
           <!-- COMPUTER PROJECT -->
           <article class="work-card">
             <a
@@ -100,9 +130,11 @@
 
               <div class="work-body">
                 <h3>Animated Clock</h3>
+
                 <p class="short-desc">
                   A dynamic clock built using JavaScript and CSS animations.
                 </p>
+
                 <div class="tags">
                   <span class="tag">JavaScript</span>
                   <span class="tag">CSS</span>
@@ -120,26 +152,31 @@
                 title="History of Boston"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
+                allowfullscreen
+              ></iframe>
             </div>
 
             <div class="work-body">
               <h3>History of Boston</h3>
+
               <p class="short-desc">
                 A documentary-style video project exploring the history of Boston.
               </p>
+
               <div class="tags">
                 <span class="tag">Video Editing</span>
                 <span class="tag">Storytelling</span>
               </div>
             </div>
           </article>
+
         </div>
 
         <!-- Projects Page Button -->
         <div class="work-actions">
-          <a class="btn primary" href="html/project.html">View All Projects</a>
+          <a class="btn primary" href="html/project.html">
+            View All Projects
+          </a>
         </div>
       </div>
     </section>
@@ -151,7 +188,10 @@
     <div class="container footer-grid">
       <div>
         <h2>Contact Me</h2>
-        <p class="muted">Send me a message using the form below.</p>
+
+        <p class="muted">
+          Send me a message using the form below.
+        </p>
 
         <div class="social-row">
           <a
@@ -159,18 +199,22 @@
             href="https://github.com/Muhtasim19"
             target="_blank"
             rel="noopener noreferrer"
-          >GitHub</a>
+          >
+            GitHub
+          </a>
 
           <a
             class="social"
             href="https://www.linkedin.com/in/muhtasim-haq-b55356325"
             target="_blank"
             rel="noopener noreferrer"
-          >LinkedIn</a>
+          >
+            LinkedIn
+          </a>
         </div>
       </div>
 
-      <!-- Contact Form -->
+      <!-- AJAX Contact Form -->
       <form
         id="contact-form"
         class="form"
@@ -198,7 +242,9 @@
           ></textarea>
         </label>
 
-        <button class="btn primary" type="submit">Send</button>
+        <button class="btn primary" type="submit">
+          Send
+        </button>
 
         <p
           id="form-status"
@@ -215,13 +261,16 @@
     </div>
   </footer>
 
-  <!-- Year Script -->
+  <!-- Current Year -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
   <!-- AJAX Contact Form -->
   <script src="js/script.js" defer></script>
+
+  <!-- Mobile Navigation -->
+  <script src="js/navigation.js" defer></script>
 
 </body>
 </html>
