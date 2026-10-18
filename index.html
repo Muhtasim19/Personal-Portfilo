@@ -6,7 +6,6 @@
   <title>Muhtasim Haq — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Remov e this before posting this to the public-->
   <meta name="description" content="Muhtasim Haq portfolio">
 </head>
 
@@ -86,10 +85,11 @@
         <div class="work-grid">
           <!-- COMPUTER PROJECT -->
           <article class="work-card">
-            <a href="https://69481b99b9540aa1febb9f36--coruscating-froyo-7bfb00.netlify.app/"
+            <a
+              href="https://69481b99b9540aa1febb9f36--coruscating-froyo-7bfb00.netlify.app/"
               target="_blank"
-              rel="noopener noreferrer">
-
+              rel="noopener noreferrer"
+            >
               <div class="work-media">
                 <img
                   class="project-thumb"
@@ -114,7 +114,6 @@
           <!-- VIDEO PROJECT -->
           <article class="work-card">
             <div class="work-media video-wrap">
-
               <iframe
                 class="video"
                 src="https://www.youtube.com/embed/Y9DNOikjOqU"
@@ -123,7 +122,6 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
-
             </div>
 
             <div class="work-body">
@@ -156,35 +154,59 @@
         <p class="muted">Send me a message using the form below.</p>
 
         <div class="social-row">
-          <a class="social"
-             href="https://github.com/Muhtasim19"
-             target="_blank"
-             rel="noopener noreferrer">GitHub</a>
+          <a
+            class="social"
+            href="https://github.com/Muhtasim19"
+            target="_blank"
+            rel="noopener noreferrer"
+          >GitHub</a>
 
-          <a class="social"
-             href="https://www.linkedin.com/in/muhtasim-haq-b55356325"
-             target="_blank"
-             rel="noopener noreferrer">LinkedIn</a>
+          <a
+            class="social"
+            href="https://www.linkedin.com/in/muhtasim-haq-b55356325"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn</a>
         </div>
       </div>
 
       <!-- Contact Form -->
       <form
+        id="contact-form"
         class="form"
         action="https://formspree.io/f/mpqalzbk"
         method="POST"
       >
         <label>
           Your email
-          <input type="email" name="email" required placeholder="you@example.com">
+          <input
+            type="email"
+            name="email"
+            autocomplete="email"
+            required
+            placeholder="you@example.com"
+          >
         </label>
 
         <label>
           Your message
-          <textarea name="message" rows="5" required placeholder="Write your message..."></textarea>
+          <textarea
+            name="message"
+            rows="5"
+            required
+            placeholder="Write your message..."
+          ></textarea>
         </label>
 
         <button class="btn primary" type="submit">Send</button>
+
+        <p
+          id="form-status"
+          class="form-status"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        ></p>
       </form>
     </div>
 
@@ -197,6 +219,9 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <!-- AJAX Contact Form -->
+  <script src="js/script.js" defer></script>
 
 </body>
 </html>
